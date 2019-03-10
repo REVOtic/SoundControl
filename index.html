@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+	<title>SoundControl</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/css/ion.rangeSlider.min.css"/>
+	<link rel="stylesheet" href="./assets/css/soundControl.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="https://use.fontawesome.com/fd9dba5260.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/js/ion.rangeSlider.min.js"></script>
+  <script src="./assets/js/saveConfig.js"></script>
+</head>
+ 
+<body>
+
+  <div>
+    <div style="text-align: center;">
+      <h1>Config Setup</h1>
+    </div>
+    <div style="text-align: center;">
+      <h2 style="color: #4ff;">Sound Control</h2>
+      <form style="text-align: center; margin: 0 auto;">
+        <div class="container">
+          <div class="row">
+            <div class="col-12" style="margin-top: 50px;">
+              <div class="slider-wrapper green">
+                <input id="frequency" type="text" class="js-range-slider" name="frequency" value="0" data-type="single" data-min="-30" data-max="30" data-grid="true"/>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12" style="margin-top: 50px;">
+              <div class="slider-wrapper green">
+                <input id="gain" type="text" class="js-range-slider" name="gain" value="0" data-type="single" data-min="-30" data-max="30" data-grid="true"/>
+              </div>
+            </div>
+          </div>
+        </div>
+        <input type="button" style="display: block; background: #444; border: none; padding: 10px 50px; margin: 30px auto; color: #fff; cursor: pointer;" onclick='saveSettings()' value="Save Auth File"/>
+      </form>
+    </div>
+    <div style="text-align: center; padding: 50px 0; background: #B6B455;">
+      <h2 style="color: #444;">Final Config</h2>
+      <div id="info-div">My Config</div>
+    </div>
+  </div>
+
+</body>
+</html>
