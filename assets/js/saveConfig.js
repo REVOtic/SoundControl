@@ -12,8 +12,9 @@ function httpGET(url) {
 	xmlHttp.send(null);
 	return url+" "+xmlHttp.responseText;
 }
+
 function saveSettings() {
 	var url = "./cgi-bin/saveConfig.cgi?" + "frequency:" + document.getElementById('frequency').value + "\\" + "gain:" + document.getElementById('gain').value;
-	//document.getElementById('info-div').innerHTML = url;
 	document.getElementById('info-div').innerHTML = httpGET(url);
+	alert("Config Saved");
 }
